@@ -16,9 +16,9 @@ kids_data.each_line do |kid|
   street_type  = kid_data_array[11]
   postal_code  = kid_data_array[12]
   house_value  = kid_data_array[13].to_i
-
+  hst          = 1.15
 toy_hash = {}
-
+total = 0
   if house_value >= 1000000
     toy_value = 0
     sub_total = 0
@@ -30,6 +30,8 @@ toy_hash = {}
       end
       sub_total += toy_value
      toy_hash[toy] = toy_value
+     total = sub_total * hst
+     total.round(2)
     end
    elsif house_value < 1000000 && house_value > 200000
     toy_value = 0
@@ -42,6 +44,8 @@ toy_hash = {}
       end
       sub_total += toy_value
       toy_hash[toy] = toy_value
+      total = sub_total * hst
+      total.round(2)
     end
     end
 
