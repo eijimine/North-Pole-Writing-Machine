@@ -1,4 +1,5 @@
 require 'erb'
+require 'pry'
 
 kids_data   = File.read('data/kids-data.txt')
 invoice_letter = File.read('templates/invoice_letter.txt.erb')
@@ -17,8 +18,13 @@ kids_data.each_line do |kid|
   postal_code  = kid_data_array[12]
   house_value  = kid_data_array[13].to_i
   hst          = 1.15
+
 toy_hash = {}
 total = 0
+
+
+# Evaluates house value then changes toy_value to 0 if Kaleidoscope.
+
   if house_value >= 1000000
     toy_value = 0
     sub_total = 0
@@ -31,7 +37,12 @@ total = 0
       sub_total += toy_value
      toy_hash[toy] = toy_value
      total = sub_total * hst
-     total.round(2)
+     total = total.round(2)
+     filename    = 'letters/invoices/' + name + '.txt'
+     letter_text = ERB.new(invoice_letter, nil, '-').result(binding)
+
+     puts "Writing #{filename}."
+     File.write(filename, letter_text)
     end
    elsif house_value < 1000000 && house_value > 200000
     toy_value = 0
@@ -45,22 +56,17 @@ total = 0
       sub_total += toy_value
       toy_hash[toy] = toy_value
       total = sub_total * hst
-      total.round(2)
+      total = total.round(2)
+      filename    = 'letters/invoices/' + name + '.txt'
+      letter_text = ERB.new(invoice_letter, nil, '-').result(binding)
+
+      puts "Writing #{filename}."
+      File.write(filename, letter_text)
+
     end
     end
 
-
-
-  # next unless behavior == 'naughty'
-
-
-
-
-  filename    = 'letters/invoices/' + name + '.txt'
-  letter_text = ERB.new(invoice_letter, nil, '-').result(binding)
-
-  puts "Writing #{filename}."
-  File.write(filename, letter_text)
+# Need to find away to do this without repeating the file writing method twice ^
 
 end
 

@@ -14,20 +14,16 @@ Below are the charges for costa's Christmas toy order. The cost for each toy is 
 costa's Toy Order
 =================
 
-
-$1000 Bear
-$1000 Bicycle
-$1000 Lego
-$1000 Boat
-$1000 Car
-$1000 Blocks
+$1000 Defective Toy
 ----
-6000  Subtotal
-$1.15   HST
+$1000  Subtotal
+  15%   HST
 ====
-$6899.999999999999  Total
+$1150  Total
 
-Your total comes to $6899.999999999999. Payment is due upon receipt of invoice. Should you fail to submit prompt payment we will repossess all toys in this order by January 7.  I encourage you to imagine the tantrum that will ensue should all of costa's toys suddenly disappear.
+Your total comes to $1150. Payment is due upon receipt of invoice. Should you fail to submit prompt payment we will repossess all toys in this order by January 7.  I encourage you to imagine the tantrum that will ensue should all of costa's toys suddenly disappear.
+
+P.S. For a limited time get 25% off the best-seller by Ms. Claus, I’m Getting Nothing for Christmas: Raising Toy-Worthy Children in a Device-Driven World.
 
 Due to a high number of NSF incidents we no longer accept personal cheques. Please make all payments through PayPal, Interac e-transfer or certified cheque.
 

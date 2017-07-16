@@ -13,18 +13,31 @@ Below are the charges for <%= name %>'s Christmas toy order. The cost for each t
 =================
 <%= name %>'s Toy Order
 =================
-
+<% if behavior == 'nice'%>
 <% toy_hash.each do |toy, value| %>
 <%= "$#{value} #{toy}" -%>
 <% end %>
+
 ----
-<%= sub_total -%>  Subtotal
-$<%= hst %>   HST
+$<%= sub_total -%>  Subtotal
+15%   HST
 ====
 $<%= total %>  Total
 
 Your total comes to $<%= total %>. Payment is due upon receipt of invoice. Should you fail to submit prompt payment we will repossess all toys in this order by January 7.  I encourage you to imagine the tantrum that will ensue should all of <%= name %>'s toys suddenly disappear.
 
+<% else %>
+$1000 Defective Toy
+----
+$1000  Subtotal
+  15%   HST
+====
+$1150  Total
+
+Your total comes to $1150. Payment is due upon receipt of invoice. Should you fail to submit prompt payment we will repossess all toys in this order by January 7.  I encourage you to imagine the tantrum that will ensue should all of <%= name %>'s toys suddenly disappear.
+
+P.S. For a limited time get 25% off the best-seller by Ms. Claus, I’m Getting Nothing for Christmas: Raising Toy-Worthy Children in a Device-Driven World.
+<% end %>
 Due to a high number of NSF incidents we no longer accept personal cheques. Please make all payments through PayPal, Interac e-transfer or certified cheque.
 
 Sincerely,

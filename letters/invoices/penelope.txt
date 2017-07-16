@@ -21,13 +21,15 @@ $100 Clue
 $100 Boat
 $100 Car
 $100 Blocks
+
 ----
-600  Subtotal
-$1.15   HST
+$600  Subtotal
+15%   HST
 ====
 $690.0  Total
 
 Your total comes to $690.0. Payment is due upon receipt of invoice. Should you fail to submit prompt payment we will repossess all toys in this order by January 7.  I encourage you to imagine the tantrum that will ensue should all of penelope's toys suddenly disappear.
+
 
 Due to a high number of NSF incidents we no longer accept personal cheques. Please make all payments through PayPal, Interac e-transfer or certified cheque.
 
